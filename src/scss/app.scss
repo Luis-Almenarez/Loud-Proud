@@ -1,0 +1,16 @@
+@use "./base/index" as v;
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: v.$font_principal;
+  height: 80vh;
+  background-color: v.$rojo-claro;
+}
+
+h1 {
+  font-size: 4rem;
+  text-transform: uppercase;
+  color: v.$beige;
+}
