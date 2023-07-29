@@ -3,6 +3,9 @@
 
 .video {
   position: relative;
+  height: 70rem;
+  min-height: 50rem;
+  overflow: hidden;
 
   .overlay {
     position: absolute;
@@ -15,21 +18,20 @@
     justify-content: center;
   }
 
-  .container {
-    height: 25rem;
-  }
-
   video {
-    width: 100%;
+    width: auto;
     display: block;
+    @include mx.dekstop {
+      width: 100%;
+    }
   }
 }
 
 .video__text {
   h2 {
     color: v.$light;
-    font-size: 5rem;
-    margin: 1rem;
+    font-size: 4rem;
+    margin: 0rem;
   }
 
   p {
@@ -37,8 +39,10 @@
     display: inline-block;
     color: v.$light;
     font-weight: bold;
-    padding: 1rem 2rem;
+    padding: 1rem 1rem;
     border-radius: 1rem;
+    text-align: center;
+    font-size: 1.5rem;
     box-shadow: 0px 0.5rem 1rem rgba(0, 0, 0, 0.7);
   }
 }
