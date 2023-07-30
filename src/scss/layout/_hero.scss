@@ -3,8 +3,7 @@
 
 .video {
   position: relative;
-  height: 70rem;
-  min-height: 50rem;
+  max-height: 60rem;
   overflow: hidden;
 
   .overlay {
