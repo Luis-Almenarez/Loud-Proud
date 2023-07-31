@@ -1,0 +1,79 @@
+@use "base/variables" as v;
+@use "base/mixins" as mx;
+
+.lineup {
+  background-color: v.$purple-dark;
+  padding: 5rem 0;
+
+  h3,
+  p {
+    text-align: center;
+    color: v.$light;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+
+  .day {
+    text-transform: uppercase;
+    margin: 5rem 0;
+  }
+}
+
+.scenery__contain {
+  @include mx.tablet {
+    @include mx.grid(2, 5rem);
+  }
+
+  .scenery {
+    border-radius: 2rem;
+    padding-top: 2rem;
+    margin: 2rem;
+    box-shadow: 1px 2px 3rem 2px rgba(74, 74, 74, 0.3);
+    p {
+      &::after {
+        content: "";
+        display: block;
+        width: 20rem;
+        height: 12rem;
+        background-size: 10rem;
+        background-repeat: no-repeat;
+        background-position: center center;
+        margin: 2rem auto 0 auto;
+      }
+    }
+  }
+}
+
+.calendary {
+  @include mx.reset-list;
+  li {
+    color: #eaf4f4;
+    padding: 2rem;
+    font-weight: bold;
+  }
+  span {
+    font-weight: normal;
+  }
+}
+
+.rap .name_scenery:after {
+  background-image: url(/build/img/icon_rap.png);
+}
+
+.trap .name_scenery:after {
+  background-image: url(/build/img/icon_trap.png);
+}
+
+.bg-light {
+  background-color: v.$red-dark;
+  li:nth-child(odd) {
+    background-color: darken(v.$red-dark, 5%);
+  }
+}
+
+.bg-dark {
+  background-color: v.$gray;
+  li:nth-child(odd) {
+    background-color: darken(v.$gray, 5%);
+  }
+}
