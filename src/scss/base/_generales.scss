@@ -16,6 +16,9 @@ html {
 body {
   font-family: v.$font_principal;
   font-size: 1.6rem;
+  &.fixed-body {
+    overflow: hidden;
+  }
 }
 
 p {
