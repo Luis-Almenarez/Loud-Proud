@@ -1,4 +1,4 @@
-const { src, dest, watch, parallel } = require("gulp");
+const { src, dest, watch, parallel, series } = require("gulp");
 // CSS
 const sass = require("gulp-sass")(require("sass"));
 const plumber = require("gulp-plumber");
@@ -43,6 +43,11 @@ function javascript(done) {
   done();
 }
 
+function build(done) {
+  // Ejecutar las tareas necesarias para construir el sitio
+  series(css, parallel(imageminTask, webpversion, javascript))(done);
+}
+
 function dev(done) {
   watch("src/scss/**/*.scss", css); // Observar cambios en todos los archivos .scss
   watch("src/js/**/*.js", javascript);
@@ -50,6 +55,7 @@ function dev(done) {
   done();
 }
 
+exports.build = build;
 exports.css = css;
 exports.js = javascript;
 exports.imageminTask = imageminTask;
