@@ -19,7 +19,7 @@ function css(done) {
 
 function imageminTask(done) {
   const options = {
-    optimizationLevel: 5,
+    optimizationLevel: 3,
   };
   src("src/img/**/*.{png,jpg}")
     .pipe(cache(imagemin(options)))
@@ -37,13 +37,21 @@ function webpversion(done) {
   done();
 }
 
+function javascript(done) {
+  src("src/JS/**/*.js").pipe(dest("build/js"));
+
+  done();
+}
+
 function dev(done) {
   watch("src/scss/**/*.scss", css); // Observar cambios en todos los archivos .scss
+  watch("src/js/**/*.js", javascript);
 
   done();
 }
 
 exports.css = css;
+exports.js = javascript;
 exports.imageminTask = imageminTask;
 exports.webpversion = webpversion;
-exports.dev = parallel(imageminTask, webpversion, dev);
+exports.dev = parallel(imageminTask, webpversion, javascript, dev);
