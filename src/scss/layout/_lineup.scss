@@ -47,7 +47,7 @@
 .calendary {
   @include mx.reset-list;
   li {
-    color: #eaf4f4;
+    color: v.$light;
     padding: 2rem;
     font-weight: bold;
   }
