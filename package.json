@@ -6,7 +6,8 @@
   "scripts": {
     "sass": "sass --watch --style=compressed src/scss:build/css/app.css",
     "tarea": "gulp tarea",
-    "dev": "gulp dev"
+    "dev": "gulp dev",
+    "build": "gulp build"
   },
   "keywords": [
     "HTML",
