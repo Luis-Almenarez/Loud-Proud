@@ -45,7 +45,9 @@ function javascript(done) {
 
 function build(done) {
   // Ejecutar las tareas necesarias para construir el sitio
-  series(css, parallel(imageminTask, webpversion, javascript))(done);
+  series(css, parallel(imageminTask, webpversion, javascript));
+
+  done();
 }
 
 function dev(done) {
