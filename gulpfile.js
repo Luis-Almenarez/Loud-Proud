@@ -2,11 +2,16 @@ const { src, dest, watch, parallel, series } = require("gulp");
 // CSS
 const sass = require("gulp-sass")(require("sass"));
 const plumber = require("gulp-plumber");
+const sourcemaps = require("gulp-sourcemaps");
 
 // IMG
 const cache = require("gulp-cache");
 const imagemin = require("gulp-imagemin");
 const webp = require("gulp-webp");
+
+//JavaScript
+
+const terser = require("gulp-terser-js");
 
 function css(done) {
   src("src/scss/**/*.scss") // Identificar archivo SCSS a compilar
@@ -38,7 +43,7 @@ function webpversion(done) {
 }
 
 function javascript(done) {
-  src("src/JS/**/*.js").pipe(dest("build/js"));
+  src("src/JS/**/*.js").pipe(sourcemaps.init()).pipe(terser()).pipe(sourcemaps.write(".")).pipe(dest("build/js"));
 
   done();
 }
