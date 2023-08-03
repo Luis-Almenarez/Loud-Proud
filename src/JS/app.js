@@ -3,7 +3,24 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 function startApp() {
+  navigation();
   createGalery();
+}
+
+function navigation() {
+  const bar = document.querySelector(".header");
+  const about = document.querySelector(".about");
+  const body = document.querySelector("body");
+
+  window.addEventListener("scroll", function () {
+    if (about.getBoundingClientRect().bottom < 0) {
+      bar.classList.add("fixed");
+      body.classList.add("body-scroll");
+    } else {
+      bar.classList.remove("fixed");
+      body.classList.remove("body-scroll");
+    }
+  });
 }
 
 function createGalery() {

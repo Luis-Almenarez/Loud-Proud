@@ -3,6 +3,16 @@
 
 .header {
   background-color: v.$black;
+  transition: all 300ms;
+  @include mx.tablet {
+    &.fixed {
+      position: fixed;
+      width: 100%;
+      left: 0;
+      top: 0;
+      box-shadow: 0.1rem 0.2rem 0.3rem v.$gray;
+    }
+  }
   h1 {
     color: v.$light;
     font-size: 3rem;
