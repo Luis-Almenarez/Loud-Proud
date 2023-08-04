@@ -6,6 +6,8 @@ Esta es una página web diseñada para presentar información sobre un evento de
 ![HTML](https://img.shields.io/badge/-HTML-ff4500?style=flat&logo=html5&logoColor=white)
 ![CSS](https://img.shields.io/badge/-CSS-2965f1?style=flat&logo=css3&logoColor=white)
 ![SCSS Badge](https://img.shields.io/badge/-SCSS-CC6699?style=flat&logo=sass&logoColor=white)
+![JavaScript Badge](https://img.shields.io/badge/-JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)
+
 
 ## Autor
 
