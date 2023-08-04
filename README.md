@@ -25,4 +25,4 @@ Puedes ver una vista previa en vivo de la landing page [aquí](https://loudproud
 
 <hr>
 
-![Inicio]![1](https://github.com/Luis-Almenarez/Loud-Proud/assets/125621759/0c82fb2f-4294-4a17-b214-6b1e7dfb23ab)
+![Inicio](https://github.com/Luis-Almenarez/Loud-Proud/assets/125621759/0c82fb2f-4294-4a17-b214-6b1e7dfb23ab)
