@@ -32,7 +32,7 @@ function createGalery() {
       
       <picture>
       <source srcset="./build/img/thumb/${i}.webp" type="image/webp" />
-      <img loading="lazy" width="200" height="300" src="./build/img/thumb/${i}.jpg" alt="Img galery" />
+      <img loading="lazy" width="199" height="133" src="./build/img/thumb/${i}.jpg" alt="Img galery" />
     </picture>
 
       `;

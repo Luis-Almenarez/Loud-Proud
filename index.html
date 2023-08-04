@@ -4,14 +4,19 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+    <meta
+      name="description"
+      content="¡Descubre la intensidad del Trap y Rap en Loud & Proud: TrapFest! Un emocionante concierto que llega a la ciudad de Medellín, Colombia, el 29 de diciembre. Disfruta de actuaciones épicas de artistas destacados del género. ¡No te pierdas esta experiencia única llena de ritmo y pasión! Compra tus boletos ahora y únete a la fiesta del Trap y Rap."
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
     <link rel="stylesheet" href="./build/css/app.css/app.css" />
+    <link rel="icon" type="image/png" href="./build/img/favicon.png" sizes="32x32" />
     <title>Loud & Proud</title>
   </head>
   <body>
@@ -41,12 +46,12 @@
       <div class="image">
         <picture>
           <source srcset="./build/img/img_vocalista.webp" type="image/webp" />
-          <img loading="lazy" width="200" height="300" src="./build/img/img_vocalista.jpg" alt="Img rapper" />
+          <img width="574" height="390" src="./build/img/img_vocalista.jpg" alt="Img rapper" />
         </picture>
       </div>
       <div class="about__text">
         <h2>Loud & Proud: TrapFest</h2>
-        <p class="date">December 15 2023, Medellín, Colombia.</p>
+        <p class="date">December 29 2023, Medellín, Colombia.</p>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero perferendis, inventore voluptas quod recusandae
           nobis hic pariatur expedita possimus et. Mollitia, placeat possimus. Veniam repudiandae cum provident culpa
@@ -202,7 +207,7 @@
     </section>
     <section id="galery" class="galery container">
       <h3>Galery</h3>
-      <ul class="galery__image"></ul>
+      <div class="galery__image"></div>
     </section>
 
     <section id="tickets" class="tickets">
@@ -251,12 +256,26 @@
         | Todos los derechos reservados.
       </p>
       <div class="social">
-        <a href="https://www.linkedin.com/in/luis-almenarez/" target="_blank"><i class="bi bi-linkedin"></i></a>
-        <a href="https://github.com/Luis-Almenarez" target="_blank"><i class="bi bi-github"></i></a>
-        <a href="https://www.instagram.com/luis_carlos_ap/" target="_blank"><i class="bi bi-instagram"></i></a>
+        <a
+          href="https://www.linkedin.com/in/luis-almenarez/"
+          target="_blank"
+          aria-label="Perfil linkedin Luis Almenarez"
+        >
+          <i class="bi bi-linkedin"></i>
+        </a>
+        <a href="https://github.com/Luis-Almenarez" target="_blank" aria-label="Perfil Github Luis Almenarez">
+          <i class="bi bi-github"></i>
+        </a>
+        <a
+          href="https://www.instagram.com/luis_carlos_ap/"
+          target="_blank"
+          aria-label="Perfil de Instagram de Luis Almenarez"
+        >
+          <i class="bi bi-instagram"></i>
+        </a>
       </div>
     </footer>
 
-    <script src="./build/js/app.js"></script>
+    <script src="./build/js/app.js" defer></script>
   </body>
 </html>
